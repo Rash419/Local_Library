@@ -238,7 +238,7 @@ exports.book_update_get = function(req, res, next) {
 
 };
 
-// Handle book update on POST.
+
 // Handle book update on POST.
 exports.book_update_post = [
 
