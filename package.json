@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "async": "^3.2.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -19,8 +21,9 @@
     "express-validator": "^6.6.1",
     "helmet": "^4.1.0",
     "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
     "moment": "^2.27.0",
-    "mongoose": "^5.9.26",
+    "mongoose": "^5.10.2",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11"
   },

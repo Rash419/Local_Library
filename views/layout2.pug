@@ -1,0 +1,57 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet',  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='container-fluid')
+      div(class='row')
+        div(class='col-sm-2')
+          block navbar
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                a.navbar-brand(href='#') Navbar
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link(href='/catalog')
+                        | Home 
+                        span.sr-only (current)
+
+                    li.nav-item.dropdown
+                        a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Books
+                        .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/catalog/books') All books
+                        a.dropdown-item(href='/catalog/book/create') Create Book
+                    
+                    li.nav-item.dropdown
+                        a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Authors
+                        .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/catalog/authors') All Authors
+                        a.dropdown-item(href='/catalog/author/create') Create Author
+                    
+                    li.nav-item.dropdown
+                        a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Genres
+                        .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/catalog/genres') All genres
+                        a.dropdown-item(href='/catalog/genre/create') Create genre
+                    
+                    li.nav-item.dropdown
+                        a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Book-Instances
+                        .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/catalog/bookinstances') All bookinstances
+                        a.dropdown-item(href='/catalog/bookinstance/create') Create bookinstance
+                    
+                    form.form-inline.my-2.my-lg-0
+                    input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+                    button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+        div(class='col-sm-10')
+          block content
